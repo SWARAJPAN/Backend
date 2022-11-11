@@ -17,8 +17,8 @@ app.use("/api/v1", recipeRouter);
 app.use("/api/v1", userRouter);
 
 app.listen(port, async () => {
-  await connectDB().then((c) => console.log("db connected"));
-  console.log("connect to port 3000");
+  await connectDB().then((c) => {});
+  
 });
 
 app.use(express.json());

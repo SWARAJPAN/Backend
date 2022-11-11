@@ -17,10 +17,10 @@ const getAllRecipe = async (req, res) => {
 
 //create a new Recipe
 const createRecipe = async (req, res) => {
-  console.log("1");
+  
   try {
     const recipe = await Recipes.create(req.body);
-    console.log(recipe);
+    
     // const data = await recipe.save();
     res.status(201).json({ recipe });
   } catch (error) {
@@ -30,9 +30,9 @@ const createRecipe = async (req, res) => {
 
 //get single Recipe
 const getRecipe = async (req, res) => {
-  console.log(req.params);
+  
   const recipeID = req.params.id;
-  console.log(recipeID);
+  
   try {
     const recipe = await Recipes.findById(recipeID);
 
